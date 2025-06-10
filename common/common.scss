@@ -2,8 +2,13 @@
   display: flex;
   justify-content: space-between; /* Center horizontally */
   align-items: center; /* Center vertically */
-  background-color: #19245c;
   color: white;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+}
+
+.latest-poll__listitem {
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
 }
