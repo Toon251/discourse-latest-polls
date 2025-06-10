@@ -9,7 +9,6 @@
     padding: 5px;
     display: flex;
     flex-direction: column;
-    flex: 0 0 calc(33.333% - 5px); /* กำหนดกล่องแถวละ 3 (ลด gap อีกเล็กน้อย) */
     border: 2px #fff
 }
 
