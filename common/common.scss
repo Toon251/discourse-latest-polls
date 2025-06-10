@@ -1,15 +1,16 @@
 .latest-poll__list {  
   display: flex;
+  flex-direction: column;
   color: white;
   flex-wrap: wrap;        /* อนุญาตให้ wrap ขึ้นแถวใหม่ได้ */
-  gap: 5px;    
+  gap: 3px;    
 }
 
 .latest-poll__listitem {
     padding: 5px;
     display: flex;
     flex-direction: column;
-    border: 2px solid  #fff;
+    border: 1px solid  #5c5959;
 }
 
 .latest-poll__listitem_footer {
