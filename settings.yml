@@ -1,0 +1,6 @@
+plugin_outlet:
+  default: "above-right-sidebar-blocks"
+hide_on_mobile:
+  default: false
+url: 'https://connect-app.efinancethai.com/public-api/incoming-events'
+title: 'กิจกรรมเร็วๆ นี้'
