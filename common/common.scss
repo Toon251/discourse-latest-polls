@@ -5,12 +5,15 @@
   color: white;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  flex-wrap: wrap;        /* อนุญาตให้ wrap ขึ้นแถวใหม่ได้ */
+  gap: 12px;    
 }
 
 .latest-poll__listitem {
-    padding: 3px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
+    flex: 0 0 calc(33.333% - 8px); /* กำหนดกล่องแถวละ 3 (ลด gap อีกเล็กน้อย) */
 }
 
 .latest-poll__listitem_footer {
