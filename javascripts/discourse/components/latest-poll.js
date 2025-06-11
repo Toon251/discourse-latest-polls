@@ -21,9 +21,26 @@ export default class LatestPoll extends Component {
         
     }
 
+    get showOnRoute() {
+      const path = this.router.currentURL;
+
+      if (settings.url_must_contain.length) {
+        const allowedPaths = settings.url_must_contain.split("|");
+        return allowedPaths.some((allowedPath) => {
+          if (allowedPath.slice(-1) === "*") {
+            return path.indexOf(allowedPath.slice(0, -1)) === 0;
+          }
+          return path === allowedPath;
+        });
+      }
+    }
+
 
     async loadEvents() {
         try {
+
+          const path = this.router.currentURL;
+
           
           const response1 = await fetch(`/session/current.json`);
           const data1 = await response1.json();

@@ -5,3 +5,7 @@ hide_on_mobile:
 url: 'https://connect-app.efinancethai.com/public-api/latest-polls'
 poll_img: 'https://demo-connect.efinancethai.com/uploads/default/original/2X/1/15b3fd28bc7ccd31e201ad3c807038b3b81f5850.png'
 title: 'โพลล่าสุด'
+url_must_contain:
+  type: list
+  list_type: simple
+  default: /latest|/categories|/new|/unread|/top*|/tag/*|/tags/*|/c/*|/t/*
