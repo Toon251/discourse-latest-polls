@@ -5,7 +5,9 @@
 }
 
 .latest-poll__listitem {
-    padding: 32px 0;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
     border-radius: 8px;   
     border: 1px solid #68696b; 
