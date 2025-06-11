@@ -48,6 +48,8 @@ export default class LatestPoll extends Component {
           if(respData.success){
             this.polls = respData.data;
           }
+
+          console.log(this.polls)
           
 
         } catch (error) {

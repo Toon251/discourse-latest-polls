@@ -1,43 +1,24 @@
 <div class='latest-poll__wrapper {{this.settings.plugin_outlet}}'>
     <h2>{{this.title}}</h2>
     <div class='latest-poll__list'>
+        {{#each this.polls as |p|}}
         <div class='latest-poll__listitem'>
             <div class='latest-poll__listitem_heading'>
                 <img width="24px" height="24px" src="{{this.pollImg}}"/>
-                <h4>ปกติแล้วชาว CONNECT เรียนรู้เรื่องลงทุนจากที่ไหน?</h4>
+                <a href="/t/{{p.topic_id}}"><h4>{{p.title}}</h4></a>
             </div>
         
             <div class='latest-poll__listitem_footer'>
                 <div>
-                    <img width="24px" height="24px" class="avatar" src="https://connect.efinancethai.com/user_avatar/connect.efinancethai.com/efincommunity/48/421_2.png" alt="eFinCommunity"/>
-                    <span>eFinCommunity</span>
+                    <img width="24px" height="24px" class="avatar" src="https://connect.efinancethai.com/{{avatar_url}}" alt="{{p.username}"/>
+                    <span>{{p.username}}</span>
                 </div>
-                <div>10/06/25</div>
+                <div>{{p.created_at}}</div>
             </div>
         </div>
-
-        <div class='latest-poll__listitem'>
-            <div class='latest-poll__listitem_heading'>
-                <img width="24px" height="24px" src="{{this.pollImg}}"/>
-                <h4>ในมุมของนักลงทุน คุณอยากให้ AI ช่วย 'ยกระดับ' การลงทุนในไทยด้านใดก่อน?</h4>
-            </div>
-            <div class='latest-poll__listitem_footer'>
-                <div>10/06/25</div>
-                <div>eFinCommunity</div>
-            </div>
-        </div>
+        {{/each}}
 
         
-        <div class='latest-poll__listitem'>
-            <div class='latest-poll__listitem_heading'>
-                <img width="24px" height="24px" src="{{this.pollImg}}"/>
-                <h4>พึ่งจบใหม่ ยังไม่รู้จะเริ่มลงทุนตัวไหนดี มีแนะนำไหมคับ</h4>
-            </div>
-            <div class='latest-poll__listitem_footer'>
-                <div>09/06/25</div>
-                <div>Chartch</div>
-            </div>
-        </div>
 
     </div>
 </div>
