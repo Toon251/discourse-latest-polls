@@ -1,3 +1,7 @@
+.latest-poll__wrapper {
+  margin-bottom: 5px;
+}
+
 .latest-poll__list {  
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
