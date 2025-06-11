@@ -1,12 +1,14 @@
 import Component from "@glimmer/component";
 import { computed, action } from '@ember/object';
-import Service from '@ember/service';
+import { service } from "@ember/service";
 import { tracked } from "@glimmer/tracking";
 
 export default class LatestPoll extends Component {
+    @service router;
     @tracked polls = [];
     @tracked pollImg = "";
     @tracked title = "";
+    @tracked show = false;
 
     @computed
     get isMobile() {
@@ -22,7 +24,13 @@ export default class LatestPoll extends Component {
 
     async loadEvents() {
         try {
-        
+          
+          const response1 = await fetch(`/session/current.json`);
+          const data1 = await response1.json();
+          console.log(data1)
+          //username = data1.current_user.username
+
+
           this.pollImg = settings.poll_img;
           this.title = settings.title;
 
