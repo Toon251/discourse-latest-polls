@@ -23,9 +23,11 @@ export default class LatestPoll extends Component {
 
     get showOnRoute() {
       const path = this.router.currentURL;
+      console.log(path)
 
       if (settings.url_must_contain.length) {
         const allowedPaths = settings.url_must_contain.split("|");
+        console.log(allowedPaths)
         return allowedPaths.some((allowedPath) => {
           if (allowedPath.slice(-1) === "*") {
             return path.indexOf(allowedPath.slice(0, -1)) === 0;
@@ -39,12 +41,12 @@ export default class LatestPoll extends Component {
     async loadEvents() {
         try {
 
-          const path = this.router.currentURL;
+          /*const path = this.router.currentURL;
 
           
           const response1 = await fetch(`/session/current.json`);
           const data1 = await response1.json();
-          console.log(data1)
+          console.log(data1)*/
           //username = data1.current_user.username
 
 
