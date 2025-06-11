@@ -29,6 +29,7 @@ export default class LatestPoll extends Component {
         const allowedPaths = settings.url_must_contain.split("|");
         console.log(allowedPaths)
         return allowedPaths.some((allowedPath) => {
+          console.log("allowedPath ", allowedPath)
           if (allowedPath.slice(-1) === "*") {
             return path.indexOf(allowedPath.slice(0, -1)) === 0;
           }
