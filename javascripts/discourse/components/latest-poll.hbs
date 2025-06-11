@@ -9,11 +9,11 @@
             </div>
         
             <div class='latest-poll__listitem_footer'>
-                <div>
+                <div class="latest-poll__listitem_footer_start">
                     <img width="24px" height="24px" class="avatar" src="https://connect.efinancethai.com/{{p.avatar_url}}" alt="{{p.username}}"/>
-                    <span>{{p.username}}</span>
+                    <span class="username">{{p.username}}</span>
                 </div>
-                <div>{{p.created_at}}</div>
+                <div class="datetime">{{p.created_at}}</div>
             </div>
         </div>
         {{/each}}
