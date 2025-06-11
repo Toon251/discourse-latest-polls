@@ -2,16 +2,18 @@
   display: flex;
   color: white;
   flex-wrap: wrap;        /* อนุญาตให้ wrap ขึ้นแถวใหม่ได้ */
-  gap: 5px;    
+  gap: 10px;    
 }
 
 .latest-poll__listitem {
     flex: 1;
     padding: 5px;
     display: flex;
+    flex: 0 0 120px; 
     flex-direction: column;
-    border-radius: 8px;   /* ตัวอย่างมุมโค้ง */
-    border: 1px solid #a1b8e6; /* ตัวอย่างเส้นขอบ */
+    border-radius: 8px;   
+    border: 1px solid #68696b; 
+    min-width: 100px;
 }
 .latest-poll__listitem_heading {
   display: flex;
