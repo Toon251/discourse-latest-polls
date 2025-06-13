@@ -23,13 +23,13 @@ export default class LatestPoll extends Component {
 
     get showOnRoute() {
       const path = this.router.currentURL;
-      console.log(path)
+      //console.log(path)
 
       if (settings.url_must_contain.length) {
         const allowedPaths = settings.url_must_contain.split("|");
-        console.log(allowedPaths)
+        //console.log(allowedPaths)
         return allowedPaths.some((allowedPath) => {
-          console.log("allowedPath ", allowedPath)
+          //console.log("allowedPath ", allowedPath)
           if (allowedPath.slice(-1) === "*") {
             return path.indexOf(allowedPath.slice(0, -1)) === 0;
           }
@@ -69,7 +69,7 @@ export default class LatestPoll extends Component {
             this.polls = respData.data;
           }
 
-          console.log(this.polls)
+          //console.log(this.polls)
           
 
         } catch (error) {
